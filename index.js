@@ -19,6 +19,9 @@ app.use("/api/user", require("./routes/booksRoute"));
 app.use("/api/community", require("./routes/communityRoute"));
 app.use("/api/user-posts", require("./routes/userPostRoute"));
 
+app.get("/", (req, res) => {
+  res.send("BookWise API is running 🚀");
+});
 
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
